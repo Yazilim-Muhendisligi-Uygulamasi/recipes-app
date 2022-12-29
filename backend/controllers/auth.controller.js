@@ -1,16 +1,14 @@
-const config = require("../config/auth.config");
 const db = require("../models");
+require('dotenv').config()
 const mailgun=require("mailgun-js")
 const _ =require("lodash")
 var generator = require('generate-password');
-const User = db.user;
-const Role = db.role;
-
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
+const User = db.user;
+const Role = db.role;
 const { user } = require("../models");
-const DOMAIN='sandbox6dc7a6f84451410a8f36db084be065e7.mailgun.org'
-const mg=mailgun({apiKey:config.MAILGUN_APIKEY,domain:DOMAIN});
+const mg=mailgun({apiKey:process.env.MAILGUN_APIKEY,domain:process.env.DOMAIN});
 
 exports.signup = (req, res) => {
   const user = new User({
@@ -95,14 +93,14 @@ exports.signin = (req, res) => {
         });
       }
 
-      const token = jwt.sign({ id: user.id }, config.secret, {
+      const token = jwt.sign({ id: user.id }, process.env.SECRET, {
         expiresIn: 86400 // 24 hours
       });
 
       var authorities = [];
 
       for (let i = 0; i < user.roles.length; i++) {
-        authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
+        authorities.push("ROLE_"+user.roles[i].name.toUpperCase());
       }
       res.status(200).send({
         id: user._id,

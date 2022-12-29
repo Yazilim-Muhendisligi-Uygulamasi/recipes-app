@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const db = require("../models");
 const { user } = require('../models');
-// Kullanıcı modeli
 const User = db.user;
 const Food =db.food
 
@@ -24,7 +23,6 @@ exports.allAccess = (req, res) => {
     User.find()
     .then(user => {
         res.send(user)
-
     })
     .catch(err => {
         res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })

@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const dbConfig=require("./config/db.config")
-
+require('dotenv').config()
 const app = express();
 
 var corsOptions = {
@@ -14,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 const db = require("./models");
 const Role = db.role;
 
-// parse requests of content-type - application/json
-db.mongoose.connect("mongodb://"+dbConfig.HOST+":"+dbConfig.PORT+"/"+dbConfig.DB, {
+
+db.mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -36,7 +35,7 @@ require('./routes/user.routes')(app);
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Tavşan dişli sinsi" });
+  res.json({ message: "recipes-app" });
 });
 
 
