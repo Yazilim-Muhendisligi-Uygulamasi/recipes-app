@@ -3,22 +3,23 @@
 }
 .media{
   margin-top: 20px;
+  margin: auto;
+  flex-direction: column;
   .img-container{
-    width: 400px;
-    height: 400px;
+    margin: auto;
   }
   .img-container img{
     width: 100%;
     height: 100%;
     border-radius: 50px;
   }
-  hr{
-    border: 5px solid black;
-  }
   .media-body{
-    margin-left: 30px;
+    margin-top: 20px;
+    h3,h5,p{
+      text-align: center;
+    }
   }
 }
 hr{
-  border: 3px solid black;
+  border: 1px solid black;
 }

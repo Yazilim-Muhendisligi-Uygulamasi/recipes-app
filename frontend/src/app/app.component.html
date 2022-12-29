@@ -1,6 +1,6 @@
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="/home" class="nav-link">THE GOAT</a>
+    <a href="/home" class="nav-link">RECIPES</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
       <li class="nav-item">
         <a href="/home" class="nav-link" routerLink="home">Anasayfa </a>
@@ -10,7 +10,7 @@
       </li>
       <li class="nav-item">
         <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user"
-          >Futbolcular</a
+          >Yemekler</a
         >
       </li>
     </ul>
@@ -42,5 +42,13 @@
 
   <div class="container">
     <router-outlet></router-outlet>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="contact">
+        <p>Bize Ulaşın</p>
+        <p>recipeskurumsal@gmail.com</p>
+      </div>
+    </div>
   </div>
 </div>

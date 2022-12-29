@@ -5,13 +5,17 @@
     }
     img{
         width: 400px;
-        height: 200px;
+        height: 250px;
         border-radius: 30px;
+        margin:auto;
     }
     hr{
         border: 0.5px solid #343a40;
     }
     .media-body{
         margin: 20px;
+        .media-body p {
+            margin-top: 10px;
+        }
     }
 }

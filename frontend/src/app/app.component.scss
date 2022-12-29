@@ -1,28 +1,29 @@
-// Set the default font and color for the navbar
 $navbar-font-size: 1.25rem;
 $navbar-color: white;
-
-// Set the default background color for the navbar
 $navbar-bg-color: #343a40;
-
-// Set the hover color for the navbar links
 $navbar-link-hover-color: #495057;
 
 .navbar {
-  // Set the font size and color for the navbar
   font-size: $navbar-font-size;
   color: $navbar-color;
-
-  // Set the background color for the navbar
   background-color: $navbar-bg-color;
-
-  // Style the navbar links
   a.nav-link {
     color: $navbar-color;
-
-    // Change the color of the navbar links when hovered over
     &:hover {
       color: rgb(2, 112, 255);
     }
+  }
+}
+.footer{
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  background-color: #343a40;
+  .contact{
+    color:white;
+    text-align: center;
+  }
+  .contact p{
+    margin: auto;
   }
 }
