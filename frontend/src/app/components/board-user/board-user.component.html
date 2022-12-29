@@ -1,0 +1,17 @@
+<div class="container" *ngFor="let food of foods">
+  <div class="media" >
+    <div class="img-container"><img
+      class="ml-3"
+      src="{{food.foodImgUrl}}"
+    /></div>
+
+    <div class="media-body" >
+      <h3 class="mt-0 mb-1">{{food.foodName}}</h3>
+      <h5 class="mt-0 mb-1">Yemeğin Malzemeleri</h5>
+      <p>{{food.ingredientsFfood}}</p>
+      <h5 class="mt-0 mb-1">Yemeğin Yapılışı</h5>
+      <p>{{food.recipe}}</p>
+    </div>
+  </div>
+  <hr>
+</div>

@@ -1,0 +1,31 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <ul>
+    <li>
+      <img
+        src="https://media.istockphoto.com/id/1332100919/vector/man-icon-black-icon-person-symbol.jpg?s=612x612&w=0&k=20&c=AVVJkvxQQCuBhawHrUhDRTCeNQ3Jgt0K1tXjJsFy1eg="
+      />
+    </li>
+    <li>
+      <h3>
+        Profile Username:<strong> {{ currentUser.username }}</strong>
+      </h3>
+    </li>
+    <li>
+      <strong>Token:</strong>
+      {{ currentUser.accessToken.substring(0, 20) }}
+      {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+    </li>
+    <li>
+      <strong>Email:</strong>
+      {{ currentUser.email }}
+    </li>
+    <li>
+      <div *ngFor="let role of currentUser.roles">
+        <div *ngIf="role === 'ROLE_USER'"><b>Role</b>: User</div>
+        <div *ngIf="role === 'ROLE_ADMIN'"><b>Role</b>: Admin</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<ng-template #loggedOut> Please login. </ng-template>

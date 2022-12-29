@@ -1,0 +1,17 @@
+.container{
+    margin-top: 2rem;
+    .media{
+        padding: 20px;
+    }
+    img{
+        width: 400px;
+        height: 200px;
+        border-radius: 30px;
+    }
+    hr{
+        border: 0.5px solid #343a40;
+    }
+    .media-body{
+        margin: 20px;
+    }
+}
