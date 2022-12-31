@@ -1,5 +1,8 @@
 # recipes-app
 ![image](https://user-images.githubusercontent.com/84281431/210135549-089134b7-ed6c-4da6-97ea-4465657599d0.png)
+
+### NOTE:For the project to work, mongoDB must be installed on your computer.Mailgun was used in the project, use your own domain address and API as a mailgun member.
+
 #### To Run this project 
 
 ```
@@ -28,5 +31,5 @@ flow chart
 ![image](https://user-images.githubusercontent.com/84281431/210153242-a5fe4e26-e0f9-4d85-9afc-014f064dbe06.png)
 
 
-### NOTE:For the project to work, mongoDB must be installed on your computer.Mailgun was used in the project, use your own domain address and API as a mailgun member.
+
 
